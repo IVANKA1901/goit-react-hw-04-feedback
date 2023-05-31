@@ -1,0 +1,8 @@
+.feedback {
+  margin-top: 40px;
+  padding: 40px;
+  /* background-color: rgb(197, 197, 206); */
+  border-radius: 8px;
+  border: 6px solid rgb(239, 236, 236);
+  box-shadow: 2px 2px 4px rgba(15, 15, 15, 0.736);
+}
