@@ -1,21 +1,15 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import css from './ButtonItem.module.css';
 
-export class ButtonItem extends Component {
-  render() {
-    return (
-      <li>
-        <button
-          className={css.btn}
-          name={this.props.name}
-          onClick={this.props.onLeaveFeedback}
-        >
-          {this.props.text}
-        </button>
-      </li>
-    );
-  }
+export function ButtonItem({ name, onLeaveFeedback, text }) {
+  return (
+    <li>
+      <button className={css.btn} name={name} onClick={onLeaveFeedback}>
+        {text}
+      </button>
+    </li>
+  );
 }
 
 ButtonItem.propTypes = {

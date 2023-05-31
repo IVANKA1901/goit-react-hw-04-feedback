@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import css from './ButtonList.module.css';
 
-export class ButtonList extends Component {
-  render() {
-    return <ul className={css.list}>{this.props.children}</ul>;
-  }
+export function ButtonList({ children }) {
+  return <ul className={css.list}>{children}</ul>;
 }
 
 ButtonList.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
